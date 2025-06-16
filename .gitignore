@@ -1,0 +1,28 @@
+venv/
+__pycache__/
+Config*.py
+output
+# *.csv
+!Strategy/MES/*.csv
+# data/
+.DS_Store
+.idea/
+
+datamine.log
+logs/
+plot.png
+email_txt/
+
+result/kline/hourly/
+result/kline/top10/
+result/analysis/
+result/mid_grid/
+
+data/binance/top10/
+data/
+result/
+Config.py
+ConfigSub.py
+AudoStrategy/
+output.log
+LoopStrategy/
