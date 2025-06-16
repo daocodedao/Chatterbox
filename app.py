@@ -1,9 +1,16 @@
 import random
 import numpy as np
 import torch
+import os
 from chatterbox.src.chatterbox.tts import ChatterboxTTS
 import gradio as gr
 # import spaces
+from utils.logger_settings import api_logger
+from utils.util import Util
+
+os.environ['HTTP_PROXY'] = Util.getProxy()
+os.environ['HTTPS_PROXY'] = Util.getProxy()
+
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"🚀 Running on device: {DEVICE}")
@@ -134,4 +141,4 @@ with gr.Blocks() as demo:
     )
 
 # demo.launch()
-demo.launch(share=False, server_port=7795, ssl_verify=False, debug=True, show_error=True)
+demo.launch(share=False, server_port=6796, ssl_verify=False, debug=True, show_error=True)
