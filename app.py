@@ -8,8 +8,8 @@ import gradio as gr
 from utils.logger_settings import api_logger
 from utils.util import Util
 
-os.environ['HTTP_PROXY'] = Util.getProxy()
-os.environ['HTTPS_PROXY'] = Util.getProxy()
+# os.environ['HTTP_PROXY'] = Util.getProxy()
+# os.environ['HTTPS_PROXY'] = Util.getProxy()
 
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
